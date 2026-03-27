@@ -1,0 +1,553 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+   <style>
+    *{padding:1px;
+     box-sizing: border-box;
+     margin: 1px;;
+      background-color: gold;
+    }
+   body{
+    overflow:auto;
+   }
+p{
+text-indent: 2rem;
+text-align: justify;
+
+
+/* text-transform: capitalize; */
+
+
+}
+    #co,#row{
+       text-align: justify;
+color:#ed3a5e
+    }
+    #v{
+
+border-radius: 20px;
+      text-align: center;  
+      text-transform:capitalize;
+      background-color: gold;
+      padding:10px;
+      background-color: aqua;
+    }
+    .home{
+     /*  margin: 1.5rem 2rem; */
+
+text-align: center;
+
+    }
+    #about-me,#be{
+       background-color: rgb(255, 0, 119) ;border-radius: 80px;
+       align-items: center;
+       padding: 15px;
+       margin: 20px auto;
+        
+     background-color: rgb(255, 0, 119); 
+       text-align:center;
+       padding: 15px;
+    }
+    #k{
+margin: 0;
+background-size:cover;
+object-fit: cover;
+padding: 50px;
+width:100%; height:100%;
+border-radius:100px;
+border-color: #3aed5b;
+
+
+    }
+#home{
+animation-name: rotate;
+animation-duration: 0.7s;
+  justify-content: center;
+  text-align: center;
+  
+}
+
+
+#SUCCESS,#HTML,#CSS{
+
+  text-align: justify;
+  align-content: center;
+  justify-content: center;
+ 
+}
+/* Button */
+.menu-btn {
+  position:fixed;
+  top: 15px;
+  left: 15px;
+  font-size: 25px;
+  background: black;
+  color: green;
+  border:20px;
+  padding: 10px 15px;
+  border-radius: 8px;
+  cursor: pointer;
+  z-index: 1000;
+}
+
+/* Sidebar */
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 220px;
+  background: #111;
+  padding-top: 60px;
+
+  transform: translateX(-100%); /* hidden */
+  transition: 0.3s ease;
+}
+
+/* Show sidebar */
+.sidebar.active {
+  transform: translateX(0);
+}
+
+/* Remove bullets */
+.sidebar ul {
+  list-style:circle;
+  padding: 0;
+}
+
+/* Links */
+.sidebar a {
+  display: block;
+  color: white;
+  text-decoration: none;
+  padding: 15px;
+  margin: 10px;
+  background: #7c3aed;
+  border-radius: 10px;
+  transition: 0.3s;
+}
+
+/* Hover effect */
+.sidebar a:hover {
+  background: #5b21b6;
+  transform: translateX(5px);
+}
+
+  /* Style the image */
+  #aa {
+  width: 150px;
+  border-radius: 20px;
+
+  animation: slideFullWidth 6s ease-in-out infinite alternate;
+}
+
+@keyframes slideFullWidth {
+  0% {
+    transform: translateX(-500px);
+  }
+  50% {
+    transform: translateX(-20);
+    opacity:0.8;
+  }
+  100% {
+    transform: translateX(500px); /* Full screen width minus image width */
+  }
+}
+/* .no{
+
+  white-space: nowrap;
+} */
+</style>
+
+<body>
+
+    <header id="home">
+      <h1 id="nn">Welcome To <strong>Bethel</strong> Page Home For Genius.</h1>
+        <section id="about-me">
+          <figure>
+            <img id="aa" src="bb.jpg" style="border-radius: 20px" width="150">
+          
+            <figcaption><em>Bethel-Web & Data Enthusiast </em></figcaption>
+          </figure>
+
+          <p>
+            I'am building a<span style="color: #7c3aed"> programmer </span>and
+            data enthusiast. On this site ,you will find my web projects,coding
+            experiments,and data insight-all built with HTML,CSS, and
+            creativity.
+          </p>
+          <p>
+            Explor my work and feel free to <a href="#contact"><strong>Contact Me</strong></a>
+          </p>
+        </section>
+    </header>
+
+   <!-- Hamburger button -->
+<button class="menu-btn" onclick="toggleMenu()">☰</button>
+<nav class="l sidebar">
+      <ul>
+        <li><a href="#SUCCESS"> Success Tips</a></li>
+        <li><a href="#HTML">learn HTML </a></li>
+        <li><a href="#CSS">Learn CSS </a></li>
+        <li><a href="#v">Working Days and Hours </a></li>
+        <li><a href="#course">Online Courses</a></li>
+        <li><a href="#m">Enjoy Cool Music Why You Explore</a></li>
+      </ul>
+    </nav>
+    <br>
+
+    <section id="SUCCESS">
+      <label><strong>Tips for Success</strong></label>
+      <p>
+        Success is not just a destination- it's a journey built on habits,
+        mindset,and consistent effort. Anyone can achieve success by
+        understanding what it takes and following clear guildlines.Here are key
+        principles to guild your path:
+      </strong>
+      </p>
+      <figure class="me">
+        <img src="mm.jpeg" alt="succes">
+      </figure>
+      <figcaption><strong style="color:#ed3a3d">Success Steps</strong></figcaption>
+      
+      <ul>
+        <br />
+        <li>
+          <mark>Set Clear Goals</mark>: Define what success truly means to you,
+          not what others think it should be. Take time to reflect on your
+          personal and professional aspirations. Break big, long-term goals into
+          smaller, achievable milestones that are measurable and time-bound.
+          Writing down your goals is essential. it makes them tangible and keeps
+          your mind focused. Review them regularly, track your progress, and
+          adjust them as necessary. This not only keeps you accountable but also
+          allows you to celebrate small victories along the way, boosting
+          motivation and confidence.
+        </li>
+        <br />
+        <li>
+          <mark>Continuous Learning Never stop being curious</mark>:
+          Continuously seek knowledge, skills, and experiences that move you
+          closer to your goals. Explore new tools, techniques, and technologies
+          in your field to stay ahead of the curve. Read books, attend
+          workshops, watch tutorials, take courses, or learn from mentors.
+          Embrace the mindset that learning is a lifelong process every new
+          skill or piece of knowledge adds value to your personal growth and
+          professional success. Even small, daily learning habits can compound
+          into significant expertise over time.
+        </li>
+        <br />
+        <li>
+          <mark>Discipline and Consistency</mark>: Consistency is the bridge
+          between goals and results. Small, deliberate actions taken every day
+          compound into significant achievements over time. Discipline means
+          showing up even when you don't feel like it, avoiding procrastination,
+          and following routines that support your growth. Set clear schedules,
+          prioritize tasks, and stick to habits that align with your goals.
+          Remember, talent alone won't bring success persistent, consistent
+          effort is what separates those who achieve from those who only dream.
+        </li>
+        <br />
+        <li>
+          <mark>Adapt and Learn from Mistakes</mark>: Mistakes are not setbacks
+          they are stepping stones to growth. Every failure contains a lesson
+          that can guide you toward improvement. Instead of dwelling on errors
+          or feeling discouraged, analyze what went wrong, extract the lesson,
+          and adjust your strategy accordingly. Cultivate resilience and
+          flexibility; the ability to adapt quickly to changing circumstances or
+          unexpected challenges is a hallmark of successful people. Over time,
+          learning from mistakes helps refine your skills, decision-making, and
+          problem-solving abilities.
+        </li>
+        <br />
+        <article>
+        <aside>
+          <figure>
+            <img src="s.jpeg" alt="key" />
+            <figcaption style="color:rgb(255, 0, 76)">Key on success</figcaption>
+          </figure>
+        </aside>
+      </article>
+        <li>
+          <mark>Stay Motivated and Positive</mark>: Your mindset determines how
+          far you will go. Surround yourself with supportive people who uplift
+          you and inspiring content that fuels your ambitions. Avoid negativity
+          and limit exposure to influences that drain your energy or distract
+          you from your goals. Celebrate small wins regularly,they are proof of
+          progress and help maintain enthusiasm. Develop a growth-oriented
+          mindset where challenges are seen as opportunities rather than
+          obstacles. Motivation fluctuates, but positivity and persistence keep
+          you moving forward consistently.
+        </li>
+        <br />
+        <li>
+          <mark>Apply Your Knowledge</mark>: Knowledge without action has little
+          value. To truly grow, apply what you learn through projects,
+          experiments, and real-world challenges. Practice solidifies
+          understanding, exposes gaps in your skills, and teaches
+          problem-solving in context. Take initiative to work on small projects,
+          freelance, or collaborate with others to put your theories into
+          action. Over time, consistent application transforms knowledge into
+          mastery, builds confidence, and positions you as someone who not only
+          knows but can also execute effectively in the real world.
+        </li>
+      </ul>
+    </section>
+    <br />
+
+    <hr style="border:1px dashed #3d3aed; width: 60; margin: 20 auto" />
+    <section id="HTML">
+      
+      <label><strong>Learn HTML</strong></label>
+      <p>
+        HTML(HyperText Markup Language) is the foundation of the web. It is the
+        language used to create and structure content on web pages. Every
+        website you visit whether it's a news site, social media platform, or
+        personal blog is built using HTML in some form. Learning HTML gives you
+        the power to turn your ideas into real web pages, allowing you to share
+        content with anyone, anywhere. With HTML, you can: Structure content
+        using headings, paragraphs, lists, and sections Example: You could
+    create a page with a main title like<strong>“My Favorite Books,”</strong> followed by a paragraph describing
+        why you like reading, and a list of your top 5 books.
+        </p>
+        <br>
+    <iframe width="560" height="315"
+src="https://www.youtube.com/embed/UB1O30fR-EE"
+title="HTML Tutorial"
+frameborder="0"
+allowfullscreen>
+</iframe>
+  
+        <article>
+        <aside>
+          <figure>
+            <img src="h.png" alt="key"/>
+            <figcaption style="color: rgb(255, 0, 47);">HTML</figcaption>
+          </figure>
+        </aside>
+      </article>
+      <p>
+        This organization helps visitors read your content easily and understand
+        the hierarchy of information. Add links to navigate between pages or
+        websites
+      </p>
+      <ul>
+        <li>
+          Example: On your personal page, you could write “Check out my blog”
+          and make it clickable so that visitors are taken directly to your
+          blog. Links connect different pages and websites, making the web a
+          network of information.
+          
+        </li>
+        <li>
+          Embed media like images, videos, and audio to make pages more engaging
+          Example: You could add a picture of your latest travel destination or
+          embed a short video showing a DIY project you completed. Using media
+          makes your page more interactive and visually appealing. Create forms
+          to collect information from users
+        </li>
+        <li>
+          Example: If you run a small business, you could add a form that asks
+          for a visitor's name, email, and message so they can contact you
+          directly. Forms allow websites to collect data, handle registrations,
+          or receive feedback.
+        </li>
+        <li>
+          Use semantic tags like headers, footers, articles, and sidebars to
+          organize your content clearly and improve accessibility Example: You
+          could have a header that introduces your website, an article section
+          describing your hobbies, a sidebar with links to related pages, and a
+          footer with your contact information. Semantic tags make your content
+          easier to read for both humans and search engines.
+        </li>
+        <article>
+        <aside>
+          <figure>
+            <img src="ht.png" alt="key" />
+            <figcaption style="color: #ed3a3d;">HTML CODE TEMPLETE</figcaption>
+          </figure>
+        </aside>
+      </article>
+        <p>
+          Mastering HTML Mastering HTML is the first step for any aspiring web
+          developer. It sets the stage for learning CSS to style pages and
+          JavaScript to make them interactive. The more you practice building
+          pages, the more comfortable you become with structuring content,
+          experimenting with layouts, and understanding how websites are built
+        </p>
+      </ul>
+    </section>
+    <br>
+     <hr style="border:1px dashed #3d3aed; width: 60; margin: 20 auto" />
+    <section id="CSS">
+      <label><strong>Learn CSS</strong></label>
+      <p>
+        Tips for learning CSS effectively Start with basic styling Style
+        headings, paragraphs, and links first.
+      </p>
+      <article>
+        <aside>
+          <figure>
+            <img src="cs.png" alt="css" />
+            <figcaption style="color:#ed3a3d">Css</figcaption>
+          </figure>
+        </aside>
+      </article>
+      <ul>
+        <li>
+          Example: Make headings bold and large, links a different color, and
+          paragraphs a comfortable reading size. Experiment with spacing Learn
+          about margins, padding, and borders to understand spacing between
+          elements.
+        </li>
+        <li>
+          Example: Create a card with a photo and text, adjusting padding inside
+          the card so the text doesn't touch the edges, and margin outside so
+          cards don't overlap. Learn layout techniques Focus on Flexbox and Grid
+          to position content efficiently.
+          <article>
+        <aside>
+          <figure>
+            <img src="block.jpg" alt="block" width="500px"/>
+            <figcaption></figcaption>
+          </figure>
+        </aside>
+      </article>
+        </li>
+        <li>
+          Example: Use a row of cards that automatically wrap to the next line
+          when the screen is smaller, or a grid of products that align perfectly
+          regardless of content size. Practice with mini projects Build small,
+          manageable projects like cards, buttons, banners, or simple landing
+          pages.
+        </li>
+        <li>
+          Example: Design a set of three profile cards with images, names, and
+          descriptions, applying hover effects for interaction.
+        </li>
+        <p>
+          Why mastering CSS matters Mastering CSS gives you the ability to turn
+          plain HTML into a visually appealing website. When combined with HTML,
+          Pages become interactive and user-friendly. You can emphasize
+          important content and guide the user's attention. Websites look
+          professional and polished, which is crucial for blogs, portfolios, or
+          business sites. Even simple changes like text color, spacing, and
+          hover effects can dramatically improve user experience and make your
+          website stand out.
+        </p>
+      </ul>
+      <br>
+       <hr style="border:1px dashed #3aed70; width: 60; margin: 20 auto" />
+<section style="background: red;" id="m">
+  <labe>Music Hub___Enjoy 🎶🎵</labe>
+<figure style="color: #ed3ac3;">
+    <audio controls src="Odera_ft_somval128k.mp3" alt="Music" title="Odera_ft_somval128k"> Odera_ft_somval128k"</audio>
+    <p>Odera_ft_somval128k</p>
+    <audio controls src="Kolaboy-Ft-Evado-Oga-Eme-(TrendyBeatz.com).mp3" alt="Music" title="Kolaboy-Ft-Evado-Oga-Eme-"></audio>
+    <p>kolaboy-Ft-Evado-Oga-Eme</p>
+    <audio controls src="Spyki-Ft-Kolaboy-Matter-Remix-(TrendyBeatz.com) (1).mp3" alt="Music" title="Spyki-Ft-Kolaboy-Matter-Remix-"></audio>
+    <p>Spyki-Ft-Kolaboy-Matter-Remix</p>
+    <audio controls src="Spyki-Ft-Phyno-Ofeke-Remix-(TrendyBeatz.com).mp3" alt="Music" title="Spyki-Ft-Phyno-Ofeke-Remix-"></audio>
+    <p>Spyki-Ft-Phyno-Ofeke-Remix-</p>
+    <audio controls src="Simi_Ft_Kizz_Daniel_-_Day_by_Day_Tunesloaded.com.ng.mp3" alt="Music" title="Simi_Ft_Kizz_Daniel_-_Day_by_Day_Tunesloaded"></audio>
+    <p>Simi_Ft_Kizz_Daniel_-_Day_by_Day_</p>
+  <figcaption style="color:blueviolet;"> Music Hub</figcaption>
+</figure>
+<br>
+   <hr style="border:1px dashed #ed3a43; width: 60; margin: 20 auto" />
+</section>
+  <p> <label id="course"><p style="color: #ed3ac3;">Bethel Help Is Here ⬇️⬇️</p> 
+    <br>
+    Check Online Courses Now And The Resources🔸</label></p>    
+<select onchange="goToCourse(this.value)">
+ 
+  <option value="">--
+   Check Online Courses 🔎⬇""--</option>
+  </option>
+  <optgroup label=
+    "Ai Courses">
+  
+  <option value="https://www.elementsofai.com/">Elements of AI (Helsinki University)</option>
+  <option value="https://www.coursera.org/learn/machine-learning">Machine Learning</option>
+  <option value="https://www.deeplearning.ai/short-courses/prompt-engineering-for-chatgpt">Pompt Engineering</option>
+  <option value="https://www.coursera.org/learn/generative-ai">Genertive Ai</option>
+  <option value="https://www.coursera.org/specializations/deep-learning">Deep Learning</option>
+  </optgroup>
+  <optgroup label="Coding Languages"></optgroup>
+  <option value="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide">JavaScript</option>
+  <option value="https://www.python.org/about/gettingstarted/">Python</option>
+  <option value="https://www.oracle.com/java/technologies/javase/jdk-learning-resources.html">Java</option>
+  <option value="https://www.learncpp.com/">C++</option>
+  <option value="https://www.w3schools.com/html/">Html</option>
+  <option value="https://www.w3schools.com/css/">Css</option>
+  </optgroup>
+</select>
+
+  <script>
+function goToCourse(url) {
+  if(url) {
+    window.open(url, "_blank"); // opens in new tab
+  }
+}
+</script>
+  
+  <script>
+function toggleMenu() {
+  document.querySelector(".sidebar").classList.toggle("active");
+}
+
+// close sidebar when link is clicked
+document.querySelectorAll(".sidebar a").forEach(link => {
+  link.addEventListener("click", () => {
+    document.querySelector(".sidebar").classList.remove("active");
+  });
+});
+</script>
+</section>
+      <table  style="text-align: center;padding:10px" id="v">
+        <caption style="color: darkgreen;"> <strong><u>Working Days and Hours </u></strong></caption>
+    <br>
+        <tr>
+            <th id="co">Days</th>
+          <td>Monday</td>
+          <td>Tuesday</td>
+          <td>Wednesday</td>
+          <td>Thursday</td>
+          <td>Friday</td>
+          <td>Saturday</td>
+          <td>Sunday</td>
+        </tr>
+    <tr>
+       <th id="row">Hours</td>
+      <td width="20">9am to 6pm</td>
+      <td width="20">9am to 6pm</td>
+      <td width="20">9am to 6pm</td>
+      <td width="20">9am to 6pm</td>
+      <td width="20">9am to 6pm</td>
+      <td width="20">9am to 6pm</td>
+      <td >closed</td>
+      </table>
+    
+      <img id="k" src="build.jpg" alt="block">
+    </section>
+    <hr>
+    <br>
+      </main>
+    <footer>
+        <label><strong> Contact me</strong></label>
+        <address id="contact">ogabety20@gmailcom
+            <br>
+            phone:+2348079193144
+            <br>Twitter = @ddream
+            <p><a href="#home"> go back to home </a></p>
+        </address>
+        <aside>
+            <p id = "be"><strong>
+                &copy; 2026 Bethel's Web Hub </strong>
+            </p>
+        </aside>
+    </footer>
+  </body>
+</html>
