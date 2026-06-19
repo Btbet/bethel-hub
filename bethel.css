@@ -1,0 +1,166 @@
+  *{padding:1px;
+     box-sizing: border-box;
+     margin: 1px;;
+   /*   background-image: url(hs.jpg);
+     background-size: 100%;
+   /*    background-color: rgba(255, 217, 0, 0.087); */
+     /*  -webkit-background-clip: text;
+      color: #3aed5b22;  */ 
+    }
+  
+   body{
+    overflow:auto;
+   }
+p{
+text-indent: 2rem;
+text-align: justify;
+
+
+/* text-transform: capitalize; */
+
+
+}
+    #co,#row{
+       text-align: justify;
+color:#ed3a5e
+    }
+    #v{
+
+border-radius: 20px;
+      text-align: center;  
+      text-transform:capitalize;
+      background-color: gold;
+      padding:10px;
+      background-color: aqua;
+    }
+    .home{
+     /*  margin: 1.5rem 2rem; */
+
+text-align: center;
+
+    }
+    #about-me,#be{
+       background-color: rgb(255, 0, 119) ;border-radius: 80px;
+       align-items: center;
+       padding: 15px;
+       margin: 20px auto;
+        
+     background-color: rgb(255, 0, 119); 
+       text-align:center;
+       padding: 15px;
+    }
+    #k{
+margin: 0;
+background-size:cover;
+object-fit: cover;
+padding: 50px;
+width:100%; height:100%;
+border-radius:100px;
+border-color: #3aed5b;
+
+
+    }
+#home{
+animation-name: rotate;
+animation-duration: 0.7s;
+  justify-content: center;
+  text-align: center;
+  
+}
+
+
+#SUCCESS,#HTML,#CSS{
+
+  text-align: justify;
+  align-content: center;
+  justify-content: center;
+ 
+}
+/* Button */
+.menu-btn {
+  position:fixed;
+  top: 15px;
+  left: 15px;
+  font-size: 25px;
+  background: black;
+  color: green;
+  border:20px;
+  padding: 10px 15px;
+  border-radius: 8px;
+  cursor: pointer;
+  z-index: 1000;
+}
+.nn{
+
+background-image:url(hs.jpg);
+background-size: 100%;
+-webkit-background-clip:text;
+color: rgba(255, 217, 0, 0.091);
+}
+/* Sidebar */
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 220px;
+  background: #111;
+  padding-top: 60px;
+
+  transform: translateX(-100%); /* hidden */
+  transition: 0.3s ease;
+}
+
+/* Show sidebar */
+.sidebar.active {
+  transform: translateX(0);
+}
+
+/* Remove bullets */
+.sidebar ul {
+  list-style:circle;
+  padding: 0;
+}
+
+/* Links */
+.sidebar a {
+  display: block;
+  color: white;
+  text-decoration: none;
+  padding: 15px;
+  margin: 10px;
+  background: #7c3aed;
+  border-radius: 10px;
+  transition: 0.3s;
+}
+
+/* Hover effect */
+.sidebar a:hover {
+  background: #5b21b6;
+  transform: translateX(5px);
+}
+
+  /* Style the image */
+  #aa {
+  width: 150px;
+  border-radius: 20px;
+
+  animation: slideFullWidth 6s ease-in-out infinite alternate;
+}
+
+@keyframes slideFullWidth {
+  0% {
+    transform: translateX(-500px);
+  }
+  50% {
+    transform: translateX(-20);
+    opacity:0.8;
+  }
+  100% {
+    transform: translateX(500px); /* Full screen width minus image width */
+  }
+}
+/* .no{
+
+  white-space: nowrap;
+} */

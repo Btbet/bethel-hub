@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <head>
+<style>
+body {
+        font-family: Arial;
+        background:brown;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+      }
+  
+ form {
+        background: white;
+        padding: 20px;
+        border-radius: 10px;
+        width: 300px;
+      }
+ 
+
+      input,
+      select,
+      button {
+        width: 100%;
+        padding: 8px;
+        margin-top: 5px;
+        margin-bottom: 15px;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+      }
+      button {
+        background:blue;color: white; boder:none;cursor: pointer;
+
+      }
+</style>
+
+
+
+  </head>
+  <body>
+    <form onsubmit="handleform(event)">
+    <label for=
+      "full name"> Full Name</label>
+      <input
+        type="text"
+        ;
+        id="name"
+        placeholder="please enter your name "
+        required>
+          
+
+    <label for ="email">
+    Email
+      <input type="email" id="email" placeholder="enter your email" required>
+
+    <label for="password">password
+    <input type="password" id = "password" placeholder="enter your password">
+    <label for="gender">
+Gender 
+<hr>
+<input type="radio" name = "gender" value="Male">
+Male
+<input type = "radio" name ="gender" value="female">
+Female
+<br>
+<hr>
+<label for = "courses">Courses we offer
+<select id= "courses">
+    <option>python</option>
+    <option>Java script </option>
+      <option>Ai</option>
+        <option>Css</option>
+          <option>Web development</option>
+
+        <input type="checkbox"id= "agree"> I agree to terms and conditions"
+        <button type="submit"> Register now </button>
+
+</form>
+  </body>
+</html>
