@@ -1,6 +1,6 @@
 
 name = "bethel-hub"
-main = "submit.js"
+main = "functions/submit.js"
 compatibility_date = "2025-06-20"
 
 [[d1_databases]]
