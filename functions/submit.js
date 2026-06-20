@@ -1,20 +1,12 @@
 export async function onRequestPost(context) {
-  const { request, env } = context;
-
-  const data = await request.json();
-
-  await env.DB
-    .prepare(
-      "INSERT INTO submissions (name, email, phone) VALUES (?, ?, ?)"
-    )
-    .bind(
-      data.name,
-      data.email,
-      data.phone
-    )
-    .run();
+  const { env } = context;
 
   return new Response(
-    `${data.name}, your details have been submitted successfully!`
+    JSON.stringify({
+      dbExists: !!env.DB
+    }),
+    {
+      headers: { "Content-Type": "application/json" }
+    }
   );
 }
