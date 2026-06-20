@@ -10,10 +10,15 @@
   <table border="1" cellpadding="10">
     <thead>
       <tr>
-        <th>ID</th>
-        <th>Name</th>
-        <th>Email</th>
-        <th>Phone</th>
+  <th>ID</th>
+  <th>Name</th>
+  <th>Email</th>
+  <th>Phone</th>
+  <th>Device</th>
+  <th>Browser</th>
+  <th>OS</th>
+  <th>Country</th>
+  <th>City</th>
       </tr>
     </thead>
     <tbody id="leadsTable"></tbody>
@@ -28,12 +33,18 @@
 
       leads.forEach(lead => {
         table.innerHTML += `
-          <tr>
-            <td>${lead.id}</td>
-            <td>${lead.name}</td>
-            <td>${lead.email}</td>
-            <td>${lead.phone}</td>
-          </tr>
+<tr>
+  <td>${lead.id}</td>
+  <td>${lead.name}</td>
+  <td>${lead.email}</td>
+  <td>${lead.phone}</td>
+  <td>${lead.device_type || ""}</td>
+  <td>${lead.browser || ""}</td>
+  <td>${lead.os || ""}</td>
+  <td>${lead.country || ""}</td>
+  <td>${lead.city || ""}</td>
+</tr>
+`;
         `;
       });
     }
