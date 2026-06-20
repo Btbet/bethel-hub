@@ -4,5 +4,5 @@ compatibility_date = "2025-01-01"
 
 [[d1_databases]]
 binding = "DB"
-database_name = "myapp-data"
-database_id = "2fdb1680-1342-4d7a-ab55-ffc1b78508d2"
+database_name = "bethel-db"
+database_id = "581fde00-8df6-45be-b2fb-4d53f5a1e09f"
