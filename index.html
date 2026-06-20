@@ -236,12 +236,28 @@ function goToCourse(url) {
 
         </section>
 <!-- Replace your old form with this -->
-<form method="POST" action="/submit">
-  <input type="text" name="name" placeholder="Your Name" required><br><br>
-  <input type="email" name="email" placeholder="Your Email" required><br><br>
-  <textarea name="message" placeholder="Your Message" rows="5" required></textarea><br><br>
-  <button type="submit">Send Message</button>
-</form>
+<form id="form">
+    <input type="text" id="name" placeholder="Name" required>
+    <button type="submit">Submit</button>
+  </form>
+
+  <script>
+    document.getElementById("form").addEventListener("submit", async (e) => {
+      e.preventDefault();
+
+      const name = document.getElementById("name").value;
+
+      const response = await fetch("/submit", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json"
+        },
+        body: JSON.stringify({ name })
+      });
+
+      alert(await response.text());
+    });
+  </script>
            
         <!-- FOOTER -->
         <footer>
