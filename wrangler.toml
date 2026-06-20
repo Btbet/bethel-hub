@@ -1,6 +1,7 @@
+
 name = "bethel-hub"
-main = "worker.js"
-compatibility_date = "2025-01-01"
+main = "submit.js"
+compatibility_date = "2025-06-20"
 
 [[d1_databases]]
 binding = "DB"
