@@ -6,19 +6,13 @@
             font-family: Arial, sans-serif;
           }
 
-* { box-shadow: 0 10px 40px black;
- 
-  box-sizing: border-box;
-}
+#cb{
+  width: 100%;
 
-html {
-  scroll-behavior: smooth;
-}
            body { line-height: 1.6;
          background: #f4f4f4;
           }
-#cb{
-  width: 100%;
+
    
           .hi{
             color: rgb(255, 0, 153);
