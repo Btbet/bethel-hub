@@ -1,15 +1,16 @@
-
-         
+   
          * {
             margin: 0;
-            padding: 0;
+               width: 100%;  padding: 0;
             box-sizing: border-box;
             font-family: Arial, sans-serif;
           }
-
+#cb{
+  width: 100%;
+}
           body {
             line-height: 1.6;
-            background: #f4f4f4;
+         background: #f4f4f4;
           }
 
           .hi{
@@ -80,9 +81,13 @@ border-color: black;}
   width: 100%;
   border-radius: 10px;
 }
-
+#zz{
+  text-align: right;
+  width: 50%;
+  color:blue;
+}
 .i{
-  white-space: nowrap;
+  
   color:red;
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
@@ -162,4 +167,4 @@ border-color: black;}
               font-size: 2rem;
             }
           }
- 
+          
