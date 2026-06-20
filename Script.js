@@ -1,6 +1,9 @@
-let me =document.getElementsByClassName("btn")
+<script>
+function goScroll() {
+  alert("Keep Scrolling, Glad to have you...");
 
- function dop (){
-console.log(me)
-alert("scroll now ")
- }
+  document.getElementById("about").scrollIntoView({
+    behavior: "smooth"
+  });
+}
+</script>
