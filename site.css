@@ -1,3 +1,5 @@
+
+         
          * {
             margin: 0;
                width: 100%;  padding: 0;
@@ -9,11 +11,11 @@
 }
           body {
             line-height: 1.6;
-         background: #fff;
+         background: #f4f4f4;
           }
 
           .hi{
-            color: rgb(5, 0, 153);
+            color: rgb(255, 0, 153);
           }
           /* NAVBAR */
           nav {
@@ -166,4 +168,3 @@ border-color: black;}
               font-size: 2rem;
             }
           }
-          
