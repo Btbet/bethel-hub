@@ -1,34 +1,28 @@
 export async function onRequestPost(context) {
   const { request, env } = context;
 
-  try {
-    const data = await request.json();
+  const data = await request.json();
 
-    const result = await env.DB
-      .prepare(
-        "INSERT INTO submissions (name, email, phone) VALUES (?, ?, ?)"
-      )
-      .bind(
-        data.name,
-        data.email,
-        data.phone
-      )
-      .run();
+  await env.DB
+    .prepare(
+      "INSERT INTO submissions (name, email, phone) VALUES (?, ?, ?)"
+    )
+    .bind(
+      data.name,
+      data.email,
+      data.phone
+    )
+    .run();
 
-    return new Response(JSON.stringify(result), {
-      headers: { "Content-Type": "application/json" }
-    });
-
-  } catch (err) {
-    return new Response(
-      JSON.stringify({
-        error: err.message,
-        stack: String(err)
-      }),
-      {
-        status: 500,
-        headers: { "Content-Type": "application/json" }
+  return new Response(
+    JSON.stringify({
+      success: true,
+      message: `${data.name}, your details have been submitted successfully!`
+    }),
+    {
+      headers: {
+        "Content-Type": "application/json"
       }
-    );
-  }
+    }
+  );
 }
