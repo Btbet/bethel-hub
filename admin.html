@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Admin Dashboard</title>
+  <meta charset="UTF-8">
+</head>
+<body>
+  <h1>Submitted Leads</h1>
+
+  <table border="1" cellpadding="10">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Phone</th>
+      </tr>
+    </thead>
+    <tbody id="leadsTable"></tbody>
+  </table>
+
+  <script>
+    async function loadLeads() {
+      const response = await fetch("/leads");
+      const leads = await response.json();
+
+      const table = document.getElementById("leadsTable");
+
+      leads.forEach(lead => {
+        table.innerHTML += `
+          <tr>
+            <td>${lead.id}</td>
+            <td>${lead.name}</td>
+            <td>${lead.email}</td>
+            <td>${lead.phone}</td>
+          </tr>
+        `;
+      });
+    }
+
+    loadLeads();
+  </script>
+</body>
+</html>
