@@ -8,6 +8,6 @@ export async function onRequestPost(context) {
     .prepare("INSERT INTO submissions (name) VALUES (?)")
     .bind(data.name)
     .run();
-
+  
   return new Response("Saved successfully");
 }
