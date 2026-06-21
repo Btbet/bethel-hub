@@ -8,22 +8,24 @@
 </head>
       
       <body>
+           
+           <!-- HERO -->
            <nav>
-  <h2>MyTech</h2>
+  <h2 class="logo">MyTech</h2>
 
-  <div class="menu-btn" onclick="toggleMenu()">☰</div>
+  <button class="menu-btn" onclick="toggleMenu()">
+    ☰
+  </button>
 
   <ul id="sidebar">
-    <li><a href="#hero">Home</a></li>
-    <li><a href="#about">About Me</a></li>
-    <li><a href="#Tech">Tech Insight</a></li>
-    <li><a href="#learning">Learning Hub</a></li>
-    <li><a href="#projects">Projects</a></li>
-    <li><a href="#contact">Contact</a></li>
+    <li><a href="#hero" onclick="closeMenu()">Home</a></li>
+    <li><a href="#about" onclick="closeMenu()">About Me</a></li>
+    <li><a href="#Tech" onclick="closeMenu()">Tech Insight</a></li>
+    <li><a href="#learning" onclick="closeMenu()">Learning Hub</a></li>
+    <li><a href="#projects" onclick="closeMenu()">Projects</a></li>
+    <li><a href="#contact" onclick="closeMenu()">Contact</a></li>
   </ul>
       </nav>
-
-        <!-- HERO -->
         <section id="hero">
       
           <h1>Welcome to Davemindx My Tech Journey</h1>
@@ -276,21 +278,22 @@ function goToCourse(url) {
   <button type="submit">Get Resources</button>
 
 </form>
-            <script>
-
-// Smooth scroll from Start Learning Now
-document.getElementById("learnBtn").addEventListener("click", () => {
-  document.getElementById("success").scrollIntoView({
-    behavior: "smooth"
-  });
-});
-
-// Mobile menu
+           <script>
 function toggleMenu() {
   document.getElementById("sidebar").classList.toggle("show");
 }
 
-// Form submission
+function closeMenu() {
+  document.getElementById("sidebar").classList.remove("show");
+}
+
+document.getElementById("learnBtn").addEventListener("click", () => {
+  document.getElementById("success").scrollIntoView({
+    behavior: "smooth",
+    block: "start"
+  });
+});
+
 document.getElementById("signupForm").addEventListener("submit", async (e) => {
   e.preventDefault();
 
@@ -298,32 +301,25 @@ document.getElementById("signupForm").addEventListener("submit", async (e) => {
   const email = document.getElementById("email").value;
   const phone = document.getElementById("phone").value;
 
-  try {
-    const response = await fetch("/submit", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json"
-      },
-      body: JSON.stringify({
-        name,
-        email,
-        phone
-      })
-    });
+  const response = await fetch("/submit", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json"
+    },
+    body: JSON.stringify({
+      name,
+      email,
+      phone
+    })
+  });
 
-    const result = await response.json();
+  const result = await response.json();
 
-    alert(result.message);
+  alert(result.message);
 
-    document.getElementById("signupForm").reset();
-
-  } catch (error) {
-    alert("Unable to submit form. Please try again.");
-    console.error(error);
-  }
+  document.getElementById("signupForm").reset();
 });
-
-            </script>   
+           </script>
 
 
         <!-- FOOTER -->
