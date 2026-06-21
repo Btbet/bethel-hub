@@ -8,11 +8,11 @@
 </head>
       
       <body>
-
-<nav>
+           <nav>
   <h2>MyTech</h2>
 
-  <!-- Menu -->
+  <div class="menu-btn" onclick="toggleMenu()">☰</div>
+
   <ul id="sidebar">
     <li><a href="#hero">Home</a></li>
     <li><a href="#about">About Me</a></li>
@@ -21,7 +21,7 @@
     <li><a href="#projects">Projects</a></li>
     <li><a href="#contact">Contact</a></li>
   </ul>
-</nav>
+      </nav>
 
         <!-- HERO -->
         <section id="hero">
@@ -59,7 +59,7 @@
 <p>work:success:impact:result.</p>
                    
             
-              <h3>What is Success?</h3>
+              <h3 id="success">What is Success?</h3>
               <p>
                 Success is about growth, consistency, and creating impact not
                 just money.
@@ -235,16 +235,62 @@ function goToCourse(url) {
 
         </section>
 <!-- Replace your old form with this -->
+<section id="resources">
+  <h2>📚 Get Free Learning Resources</h2>
+
+  <p>
+    Want access to programming notes, PDF guides,
+    learning roadmaps, tech resources, and updates?
+  </p>
+
+  <p>
+    Fill out the form below to receive free resources and future updates.
+  </p>
+</section>
+
 <form id="signupForm">
-  <input type="text" id="name" placeholder="Full Name" required>
 
-  <input type="email" id="email" placeholder="Email Address" required>
+  <h3>Get Free Resources</h3>
 
-  <input type="tel" id="phone" placeholder="Phone Number" required>
+  <input
+    type="text"
+    id="name"
+    placeholder="Full Name"
+    required
+  >
 
-  <button type="submit">Submit</button>
+  <input
+    type="email"
+    id="email"
+    placeholder="Email Address"
+    required
+  >
+
+  <input
+    type="tel"
+    id="phone"
+    placeholder="Phone Number"
+    required
+  >
+
+  <button type="submit">Get Resources</button>
+
 </form>
-<script>
+            <script>
+
+// Smooth scroll from Start Learning Now
+document.getElementById("learnBtn").addEventListener("click", () => {
+  document.getElementById("success").scrollIntoView({
+    behavior: "smooth"
+  });
+});
+
+// Mobile menu
+function toggleMenu() {
+  document.getElementById("sidebar").classList.toggle("show");
+}
+
+// Form submission
 document.getElementById("signupForm").addEventListener("submit", async (e) => {
   e.preventDefault();
 
@@ -252,22 +298,33 @@ document.getElementById("signupForm").addEventListener("submit", async (e) => {
   const email = document.getElementById("email").value;
   const phone = document.getElementById("phone").value;
 
-  const response = await fetch("/submit", {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json"
-    },
-    body: JSON.stringify({
-      name,
-      email,
-      phone
-    })
-  });
+  try {
+    const response = await fetch("/submit", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify({
+        name,
+        email,
+        phone
+      })
+    });
 
-  const result = await response.json();
-  alert(result.message);
+    const result = await response.json();
+
+    alert(result.message);
+
+    document.getElementById("signupForm").reset();
+
+  } catch (error) {
+    alert("Unable to submit form. Please try again.");
+    console.error(error);
+  }
 });
-</script>
+
+            </script>   
+
 
         <!-- FOOTER -->
         <footer>
