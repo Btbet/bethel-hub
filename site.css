@@ -9,6 +9,32 @@
 #cb{
   width: 100%;
 }
+html{
+  scroll-behavior:smooth;
+}
+
+.menu-btn{
+  display:none;
+  font-size:30px;
+  cursor:pointer;
+}
+
+@media(max-width:768px){
+
+  .menu-btn{
+    display:block;
+  }
+
+  #sidebar{
+    display:none;
+    flex-direction:column;
+    width:100%;
+  }
+
+  #sidebar.show{
+    display:flex;
+  }
+}
           body {
             line-height: 1.6;
          background: #f4f4f4;
