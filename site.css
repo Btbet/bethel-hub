@@ -74,7 +74,15 @@ nav{
 #sidebar li a:hover{
     background:#222;
 }
-          body {
+#learnBtn {
+         background: #111;
+            color: #fff;
+            padding: 15px 40px;
+            display: flex;
+         border-radius: 20px;
+            justify-content: space-between;
+            align-items: center;}
+      body {
             line-height: 1.6;
          background: #f4f4f4;
           }
