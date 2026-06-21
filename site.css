@@ -12,28 +12,43 @@
 html{
   scroll-behavior:smooth;
 }
+nav{
+  position:relative;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  padding:15px;
+}
+
+.logo{
+  margin:0 auto;
+}
 
 .menu-btn{
-  display:none;
-  font-size:30px;
+  position:absolute;
+  right:20px;
+  top:50%;
+  transform:translateY(-50%);
+  font-size:28px;
+  background:none;
+  border:none;
   cursor:pointer;
 }
 
-@media(max-width:768px){
+#sidebar{
+  display:none;
+}
 
-  .menu-btn{
-    display:block;
-  }
-
-  #sidebar{
-    display:none;
-    flex-direction:column;
-    width:100%;
-  }
-
-  #sidebar.show{
-    display:flex;
-  }
+#sidebar.show{
+  display:flex;
+  flex-direction:column;
+  position:absolute;
+  top:60px;
+  right:10px;
+  min-width:200px;
+  padding:15px;
+  border-radius:10px;
+  z-index:1000;
 }
           body {
             line-height: 1.6;
