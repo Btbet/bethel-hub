@@ -82,6 +82,14 @@ nav{
          border-radius: 20px;
             justify-content: center;
             align-items: center;}
+#signupForm { padding: 10px 20px;
+            background: gold;
+            color: #111;
+            border: none;
+             
+            border-radius: 20px;
+
+}
       body {
             line-height: 1.6;
          background: #f4f4f4;
