@@ -7,49 +7,47 @@
 <body>
   <h1>Submitted Leads</h1>
 
-  <table border="1" cellpadding="10">
-    <thead>
+<table border="1">
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Name</th>
+      <th>Email</th>
+      <th>Phone</th>
+      <th>Device</th>
+      <th>Browser</th>
+      <th>OS</th>
+      <th>Country</th>
+      <th>City</th>
+    </tr>
+  </thead>
+  <tbody id="leadsTable"></tbody>
+</table>
+<script>
+async function loadLeads() {
+  const response = await fetch("/leads");
+  const leads = await response.json();
+
+  const table = document.getElementById("leadsTable");
+
+  leads.forEach(lead => {
+    table.innerHTML += `
       <tr>
-  <th>ID</th>
-  <th>Name</th>
-  <th>Email</th>
-  <th>Phone</th>
-  <th>Device</th>
-  <th>Browser</th>
-  <th>OS</th>
-  <th>Country</th>
-  <th>City</th>
+        <td>${lead.id}</td>
+        <td>${lead.name}</td>
+        <td>${lead.email}</td>
+        <td>${lead.phone}</td>
+        <td>${lead.device_type}</td>
+        <td>${lead.browser}</td>
+        <td>${lead.os}</td>
+        <td>${lead.country}</td>
+        <td>${lead.city}</td>
       </tr>
-    </thead>
-    <tbody id="leadsTable"></tbody>
-  </table>
+    `;
+  });
+}
 
-  <script>
-    async function loadLeads() {
-      const response = await fetch("/leads");
-      const leads = await response.json();
-
-      const table = document.getElementById("leadsTable");
-
-      leads.forEach(lead => {
-        table.innerHTML += `
-<tr>
-  <td>${lead.id}</td>
-  <td>${lead.name}</td>
-  <td>${lead.email}</td>
-  <td>${lead.phone}</td>
-  <td>${lead.device_type || ""}</td>
-  <td>${lead.browser || ""}</td>
-  <td>${lead.os || ""}</td>
-  <td>${lead.country || ""}</td>
-  <td>${lead.city || ""}</td>
-</tr>
-`;
-        `;
-      });
-    }
-
-    loadLeads();
-  </script>
+loadLeads();
+</script>
 </body>
 </html>
