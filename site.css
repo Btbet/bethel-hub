@@ -80,7 +80,7 @@ nav{
             padding: 15px 40px;
             display: flex;
          border-radius: 20px;
-            justify-content: space-between;
+            justify-content: center;
             align-items: center;}
       body {
             line-height: 1.6;
